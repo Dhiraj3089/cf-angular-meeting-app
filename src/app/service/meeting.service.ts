@@ -7,7 +7,7 @@ import { Room } from '../room';
 })
 export class MeetingService {
   rooms: Room[];
-  apiURL: String = 'http://localhost:6001/api/'
+  apiURL: String = 'https://cf-poc.cfapps.io/api/'
   constructor(private http: HttpClient) { 
 
   }
