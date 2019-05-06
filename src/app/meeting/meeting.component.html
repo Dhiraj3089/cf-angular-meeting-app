@@ -1,0 +1,22 @@
+
+<ng-container  *ngFor="let room of rooms" >
+<mat-card class="example-card">
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title class="card_title"><mat-icon>meeting_room</mat-icon>{{room.room_name}}</mat-card-title>
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-content>
+      <mat-grid-list cols="3" rowHeight="3:1">
+      <mat-grid-tile><mat-icon> people</mat-icon> {{room.room_size}}</mat-grid-tile>
+      <mat-grid-tile><mat-icon> tv {{room.room_features.has_tv ==true? 'check' : 'cancel'}} </mat-icon><br/></mat-grid-tile>
+      <mat-grid-tile><mat-icon> switch_video check</mat-icon><br/></mat-grid-tile>
+      </mat-grid-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="openDialog(room)">Book Now</button>
+  </mat-card-actions>
+</mat-card>
+<br/>
+</ng-container>
